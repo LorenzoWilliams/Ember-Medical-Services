@@ -58,6 +58,12 @@
     <Compile Include="Patient Detail2.Designer.cs">
       <DependentUpon>Patient Detail2.cs</DependentUpon>
     </Compile>
+    <Compile Include="ScheduleAppointment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ScheduleAppointment.Designer.cs">
+      <DependentUpon>ScheduleAppointment.cs</DependentUpon>
+    </Compile>
     <Compile Include="Staff Details.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +95,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Patient Detail2.resx">
       <DependentUpon>Patient Detail2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScheduleAppointment.resx">
+      <DependentUpon>ScheduleAppointment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Staff Details.resx">
       <DependentUpon>Staff Details.cs</DependentUpon>
