@@ -52,6 +52,12 @@
     <Compile Include="Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
+    <Compile Include="MedicalHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MedicalHistory.Designer.cs">
+      <DependentUpon>MedicalHistory.cs</DependentUpon>
+    </Compile>
     <Compile Include="Patient Detail2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +116,9 @@
     </Compile>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MedicalHistory.resx">
+      <DependentUpon>MedicalHistory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Patient Detail2.resx">
       <DependentUpon>Patient Detail2.cs</DependentUpon>
