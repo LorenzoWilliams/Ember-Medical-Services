@@ -151,6 +151,7 @@
             this.b_submit.TabIndex = 25;
             this.b_submit.Text = "Next Page";
             this.b_submit.UseVisualStyleBackColor = true;
+            this.b_submit.Click += new System.EventHandler(this.b_submit_Click);
             // 
             // label6
             // 
@@ -161,7 +162,7 @@
             this.label6.Size = new System.Drawing.Size(80, 16);
             this.label6.TabIndex = 35;
             this.label6.Text = "Date of Birth";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
+        
             // 
             // dateTimePicker1
             // 
@@ -248,7 +249,7 @@
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(207, 20);
             this.textBox7.TabIndex = 53;
-            this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
+      
             // 
             // label12
             // 
@@ -259,7 +260,7 @@
             this.label12.Size = new System.Drawing.Size(98, 16);
             this.label12.TabIndex = 52;
             this.label12.Text = "Phone Number";
-            this.label12.Click += new System.EventHandler(this.label12_Click);
+        
             // 
             // textBox5
             // 
@@ -322,7 +323,7 @@
             this.label5.Size = new System.Drawing.Size(141, 24);
             this.label5.TabIndex = 34;
             this.label5.Text = "Patient Details";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
+        
             // 
             // label14
             // 
