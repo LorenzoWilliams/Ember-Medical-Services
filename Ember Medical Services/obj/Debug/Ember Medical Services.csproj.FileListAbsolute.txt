@@ -29,3 +29,6 @@ C:\Users\Lon-Nix\Desktop\Ember Medical\Ember-Medical-Services\Ember Medical Serv
 C:\Users\Lon-Nix\Desktop\Ember Medical\Ember-Medical-Services\Ember Medical Services\obj\Debug\Ember_Medical_Services.ScheduleAppointment.resources
 C:\Users\Lon-Nix\Desktop\Ember Medical\Ember-Medical-Services\Ember Medical Services\obj\Debug\Ember_Medical_Services.ViewPatients.resources
 C:\Users\Lon-Nix\Desktop\Ember Medical\Ember-Medical-Services\Ember Medical Services\obj\Debug\Ember_Medical_Services.ViewStaff.resources
+C:\Users\Lon-Nix\Desktop\Ember Medical\Ember-Medical-Services\Ember Medical Services\obj\Debug\Ember_Medical_Services.MedicalHistory.resources
+C:\Users\Lon-Nix\Desktop\Ember Medical\Ember-Medical-Services\Ember Medical Services\obj\Debug\Ember_Medical_Services.MedicalInfo.resources
+C:\Users\Lon-Nix\Desktop\Ember Medical\Ember-Medical-Services\Ember Medical Services\obj\Debug\Ember_Medical_Services.ViewAppointments.resources
