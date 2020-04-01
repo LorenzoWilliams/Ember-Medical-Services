@@ -162,7 +162,6 @@
             this.label6.Size = new System.Drawing.Size(80, 16);
             this.label6.TabIndex = 35;
             this.label6.Text = "Date of Birth";
-        
             // 
             // dateTimePicker1
             // 
@@ -249,7 +248,6 @@
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(207, 20);
             this.textBox7.TabIndex = 53;
-      
             // 
             // label12
             // 
@@ -260,7 +258,6 @@
             this.label12.Size = new System.Drawing.Size(98, 16);
             this.label12.TabIndex = 52;
             this.label12.Text = "Phone Number";
-        
             // 
             // textBox5
             // 
@@ -323,7 +320,6 @@
             this.label5.Size = new System.Drawing.Size(141, 24);
             this.label5.TabIndex = 34;
             this.label5.Text = "Patient Details";
-        
             // 
             // label14
             // 
@@ -857,6 +853,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(564, 671);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
