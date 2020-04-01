@@ -77,6 +77,12 @@ namespace Ember_Medical_Services
 
         }
 
+
+        private void b_staff_Click(object sender, EventArgs e)
+        {
+            openChildForm(new Staff_Details());
+        }
+
         private Form activeForm = null;
         private void openChildForm(Form childForm)
         {
@@ -92,7 +98,6 @@ namespace Ember_Medical_Services
             childForm.Show();
 
         }
-
 
     }
 }
