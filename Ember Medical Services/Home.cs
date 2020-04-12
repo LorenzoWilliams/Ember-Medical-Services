@@ -87,12 +87,30 @@ namespace Ember_Medical_Services
             staff_details.Show();
         }
 
+<<<<<<< HEAD
         private void b_makeAppointment_Click(object sender, EventArgs e)
         {
            
             var scheduleAppointments = new ScheduleAppointment();
             scheduleAppointments.Show();
         }
+=======
+        
+        private Form activeForm = null;
+        public void openChildForm(Form childForm)
+        {
+
+            if (activeForm != null)
+                activeForm.Close();
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            panelChildForm.Controls.Add(childForm);
+            panelChildForm.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+>>>>>>> b3c75119abddbf81475428ea1d0533eddc715aa6
 
         private void b_ViewAppointment_Click(object sender, EventArgs e)
         {

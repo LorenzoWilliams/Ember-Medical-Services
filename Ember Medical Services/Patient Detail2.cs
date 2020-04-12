@@ -26,5 +26,10 @@ namespace Ember_Medical_Services
         {
 
         }
+
+        private void BtnPatientSubmit_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

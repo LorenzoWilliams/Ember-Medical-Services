@@ -56,6 +56,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Appointment.cs">
+<<<<<<< HEAD
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="AppointmentRange_Result.cs">
@@ -78,6 +79,30 @@
     </Compile>
     <Compile Include="Female_Patients.cs">
       <DependentUpon>Model1.tt</DependentUpon>
+=======
+      <DependentUpon>EmberMedicalService_db.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Bill.cs">
+      <DependentUpon>EmberMedicalService_db.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Department.cs">
+      <DependentUpon>EmberMedicalService_db.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmberMedicalService_db.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EmberMedicalService_db.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmberMedicalService_db.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EmberMedicalService_db.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmberMedicalService_db.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EmberMedicalService_db.edmx</DependentUpon>
+>>>>>>> b3c75119abddbf81475428ea1d0533eddc715aa6
     </Compile>
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
@@ -109,6 +134,9 @@
     <Compile Include="Paid_Patient.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Nurse.cs">
+      <DependentUpon>EmberMedicalService_db.tt</DependentUpon>
+    </Compile>
     <Compile Include="Patient Detail2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +144,7 @@
       <DependentUpon>Patient Detail2.cs</DependentUpon>
     </Compile>
     <Compile Include="Patient.cs">
+<<<<<<< HEAD
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="PatientsList_Result.cs">
@@ -143,6 +172,21 @@
     </Compile>
     <Compile Include="Receptionist.cs">
       <DependentUpon>Model1.tt</DependentUpon>
+=======
+      <DependentUpon>EmberMedicalService_db.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Payment.cs">
+      <DependentUpon>EmberMedicalService_db.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Physician.cs">
+      <DependentUpon>EmberMedicalService_db.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Position.cs">
+      <DependentUpon>EmberMedicalService_db.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Receptionist.cs">
+      <DependentUpon>EmberMedicalService_db.tt</DependentUpon>
+>>>>>>> b3c75119abddbf81475428ea1d0533eddc715aa6
     </Compile>
     <Compile Include="ScheduleAppointment.cs">
       <SubType>Form</SubType>
@@ -200,6 +244,9 @@
     <Compile Include="Visit.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Visit.cs">
+      <DependentUpon>EmberMedicalService_db.tt</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
@@ -239,6 +286,7 @@
     <EmbeddedResource Include="ViewStaffs.resx">
       <DependentUpon>ViewStaffs.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
     <EntityDeploy Include="Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model1.Designer.cs</LastGenOutput>
@@ -258,6 +306,16 @@
     <None Include="Patient_DataSet.xss">
       <DependentUpon>Patient_DataSet.xsd</DependentUpon>
     </None>
+=======
+    <EntityDeploy Include="EmberMedicalService_db.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>EmberMedicalService_db.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="EmberMedicalService_db.edmx.diagram">
+      <DependentUpon>EmberMedicalService_db.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+>>>>>>> b3c75119abddbf81475428ea1d0533eddc715aa6
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -272,6 +330,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
@@ -286,5 +345,21 @@
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
   </ItemGroup>
+=======
+    <Content Include="EmberMedicalService_db.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>EmberMedicalService_db.Context.cs</LastGenOutput>
+      <DependentUpon>EmberMedicalService_db.edmx</DependentUpon>
+    </Content>
+    <Content Include="EmberMedicalService_db.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>EmberMedicalService_db.edmx</DependentUpon>
+      <LastGenOutput>EmberMedicalService_db.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+>>>>>>> b3c75119abddbf81475428ea1d0533eddc715aa6
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
