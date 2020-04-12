@@ -1,0 +1,614 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Ember_medical_service_dbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Appointments">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Date" Type="date" Nullable="false" />
+    <Property Name="Time" Type="time" Precision="7" Nullable="false" />
+    <Property Name="Physician_id" Type="int" />
+    <Property Name="Patient_id" Type="int" />
+    <Property Name="Comments" Type="nvarchar" MaxLength="300" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Attempted_delpayment">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="timestmp" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Bills">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Date" Type="date" Nullable="false" />
+    <Property Name="Currency" Type="nvarchar" MaxLength="3" Nullable="false" />
+    <Property Name="Total" Type="real" Nullable="false" />
+    <Property Name="Patient_id" Type="int" />
+  </EntityType>
+  <EntityType Name="Departments">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Department" Type="nvarchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Nurses">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Last_Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Department_id" Type="int" />
+    <Property Name="Position_id" Type="int" />
+    <Property Name="Address" Type="nvarchar" MaxLength="300" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="15" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Patients">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Gender" Type="nvarchar" MaxLength="1" Nullable="false" />
+    <Property Name="D.O.B" Type="date" Nullable="false" />
+    <Property Name="Address" Type="nvarchar" MaxLength="300" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="15" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Payments">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Receptionist_id" Type="int" />
+    <Property Name="Bill_id" Type="int" />
+    <Property Name="Patient_id" Type="int" />
+    <Property Name="Pay_Status" Type="nvarchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Physicians">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="3" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Last_Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Gender" Type="nvarchar" MaxLength="1" Nullable="false" />
+    <Property Name="Department_id" Type="int" />
+    <Property Name="Position_id" Type="int" />
+    <Property Name="Address" Type="nvarchar" MaxLength="300" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="15" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Positions">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Position" Type="nvarchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Receptionists">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Last_Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Department_id" Type="int" />
+    <Property Name="Position_id" Type="int" />
+    <Property Name="Address" Type="nvarchar" MaxLength="300" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="15" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Visits">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Date" Type="date" Nullable="false" />
+    <Property Name="Time" Type="time" Precision="7" Nullable="false" />
+    <Property Name="Receptionist_id" Type="int" />
+    <Property Name="Patient_id" Type="int" />
+    <Property Name="Nurse_id" Type="int" />
+    <Property Name="Weight_lb" Type="real" Nullable="false" />
+    <Property Name="Height_cm" Type="real" Nullable="false" />
+    <Property Name="Blood_Pressure" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Blood_Sugar" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Physician_id" Type="int" />
+    <Property Name="Symptoms" Type="nvarchar" MaxLength="1000" Nullable="false" />
+    <Property Name="Diagnosis" Type="nvarchar" MaxLength="1000" Nullable="false" />
+    <Property Name="Prescription" Type="nvarchar" MaxLength="300" Nullable="false" />
+    <Property Name="Comments" Type="nvarchar" MaxLength="300" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Ember_medical_service_db.dbo.Appointment_View' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Appointment_View">
+    <Key>
+      <PropertyRef Name="Date" />
+      <PropertyRef Name="FirstName" />
+      <PropertyRef Name="LastName" />
+      <PropertyRef Name="title" />
+      <PropertyRef Name="Last_Name" />
+    </Key>
+    <Property Name="Date" Type="date" Nullable="false" />
+    <Property Name="Time" Type="varchar" MaxLength="8" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="title" Type="nvarchar" MaxLength="3" Nullable="false" />
+    <Property Name="Last_Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Ember_medical_service_db.dbo.Female_Patients' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Female_Patients">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="FirstName" />
+      <PropertyRef Name="LastName" />
+      <PropertyRef Name="Gender" />
+      <PropertyRef Name="D.O.B" />
+      <PropertyRef Name="Address" />
+      <PropertyRef Name="Email" />
+      <PropertyRef Name="Phone" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Gender" Type="nvarchar" MaxLength="1" Nullable="false" />
+    <Property Name="D.O.B" Type="date" Nullable="false" />
+    <Property Name="Address" Type="nvarchar" MaxLength="300" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="15" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Ember_medical_service_db.dbo.Nurses_Patient_View' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Nurses_Patient_View">
+    <Key>
+      <PropertyRef Name="Date" />
+      <PropertyRef Name="FirstName" />
+      <PropertyRef Name="LastName" />
+      <PropertyRef Name="Last_Name" />
+    </Key>
+    <Property Name="Date" Type="date" Nullable="false" />
+    <Property Name="Start" Type="varchar" MaxLength="8" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Position_id" Type="int" />
+    <Property Name="Last_Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Ember_medical_service_db.dbo.Paid_Patient' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Paid_Patient">
+    <Key>
+      <PropertyRef Name="First Name" />
+      <PropertyRef Name="Last Name" />
+      <PropertyRef Name="Pay Status" />
+    </Key>
+    <Property Name="First Name" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Last Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Pay Status" Type="nvarchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Ember_medical_service_db.dbo.Patients_address' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Patients_address">
+    <Key>
+      <PropertyRef Name="LastName" />
+      <PropertyRef Name="FirstName" />
+      <PropertyRef Name="Address" />
+    </Key>
+    <Property Name="LastName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Address" Type="nvarchar" MaxLength="300" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Ember_medical_service_db.dbo.Patients_Age' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Patients_Age">
+    <Key>
+      <PropertyRef Name="FirstName" />
+      <PropertyRef Name="LastName" />
+    </Key>
+    <Property Name="FirstName" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="age" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Ember_medical_service_db.dbo.staff_members' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="staff_members">
+    <Key>
+      <PropertyRef Name="FirstName" />
+      <PropertyRef Name="Last_Name" />
+    </Key>
+    <Property Name="FirstName" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Last_Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__Appointme__Patie__49C3F6B7">
+    <End Role="Patients" Type="Self.Patients" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Appointments" Type="Self.Appointments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Patients">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Appointments">
+        <PropertyRef Name="Patient_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Appointme__Physi__48CFD27E">
+    <End Role="Physicians" Type="Self.Physicians" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Appointments" Type="Self.Appointments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Physicians">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Appointments">
+        <PropertyRef Name="Physician_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Bills__Patient_i__52593CB8">
+    <End Role="Patients" Type="Self.Patients" Multiplicity="0..1" />
+    <End Role="Bills" Type="Self.Bills" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Patients">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Bills">
+        <PropertyRef Name="Patient_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Nurses__Departme__412EB0B6">
+    <End Role="Departments" Type="Self.Departments" Multiplicity="0..1" />
+    <End Role="Nurses" Type="Self.Nurses" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Departments">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Nurses">
+        <PropertyRef Name="Department_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Nurses__Position__4222D4EF">
+    <End Role="Positions" Type="Self.Positions" Multiplicity="0..1" />
+    <End Role="Nurses" Type="Self.Nurses" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Positions">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Nurses">
+        <PropertyRef Name="Position_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Payments__Bill_i__5629CD9C">
+    <End Role="Bills" Type="Self.Bills" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Payments" Type="Self.Payments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Bills">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Payments">
+        <PropertyRef Name="Bill_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Payments__Patien__571DF1D5">
+    <End Role="Patients" Type="Self.Patients" Multiplicity="0..1" />
+    <End Role="Payments" Type="Self.Payments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Patients">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Payments">
+        <PropertyRef Name="Patient_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Payments__Recept__5535A963">
+    <End Role="Receptionists" Type="Self.Receptionists" Multiplicity="0..1" />
+    <End Role="Payments" Type="Self.Payments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Receptionists">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Payments">
+        <PropertyRef Name="Receptionist_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Physician__Depar__3D5E1FD2">
+    <End Role="Departments" Type="Self.Departments" Multiplicity="0..1" />
+    <End Role="Physicians" Type="Self.Physicians" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Departments">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Physicians">
+        <PropertyRef Name="Department_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Physician__Posit__3E52440B">
+    <End Role="Positions" Type="Self.Positions" Multiplicity="0..1" />
+    <End Role="Physicians" Type="Self.Physicians" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Positions">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Physicians">
+        <PropertyRef Name="Position_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Reception__Depar__44FF419A">
+    <End Role="Departments" Type="Self.Departments" Multiplicity="0..1" />
+    <End Role="Receptionists" Type="Self.Receptionists" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Departments">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Receptionists">
+        <PropertyRef Name="Department_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Reception__Posit__45F365D3">
+    <End Role="Positions" Type="Self.Positions" Multiplicity="0..1" />
+    <End Role="Receptionists" Type="Self.Receptionists" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Positions">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Receptionists">
+        <PropertyRef Name="Position_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Visits__Nurse_id__4E88ABD4">
+    <End Role="Nurses" Type="Self.Nurses" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Visits" Type="Self.Visits" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Nurses">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Visits">
+        <PropertyRef Name="Nurse_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Visits__Patient___4D94879B">
+    <End Role="Patients" Type="Self.Patients" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Visits" Type="Self.Visits" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Patients">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Visits">
+        <PropertyRef Name="Patient_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Visits__Physicia__4F7CD00D">
+    <End Role="Physicians" Type="Self.Physicians" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Visits" Type="Self.Visits" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Physicians">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Visits">
+        <PropertyRef Name="Physician_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Visits__Receptio__4CA06362">
+    <End Role="Receptionists" Type="Self.Receptionists" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Visits" Type="Self.Visits" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Receptionists">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Visits">
+        <PropertyRef Name="Receptionist_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="AppointmentRange" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Appointment1" Type="date" Mode="In" />
+    <Parameter Name="Appointment2" Type="date" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="Date" Type="date" Nullable="false" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="AppointmentScheduled" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Date" Type="date" Mode="In" />
+    <Parameter Name="Time" Type="time" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="Date" Type="date" Nullable="false" />
+          <Property Name="Time" Type="varchar" MaxLength="8" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="DeletePhysician" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="getMaxHeight" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="float" />
+  <Function Name="getMaxTotal" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="float" />
+  <Function Name="InputPatients" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Fname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Lname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Gender" Type="varchar" Mode="In" />
+    <Parameter Name="DOB" Type="date" Mode="In" />
+    <Parameter Name="Address" Type="nvarchar" Mode="In" />
+    <Parameter Name="email" Type="nvarchar" Mode="In" />
+    <Parameter Name="phone" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="PatientsList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="UpdatePatientAddress" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID" Type="int" Mode="In" />
+    <Parameter Name="Address" Type="nvarchar" Mode="In" />
+    <Parameter Name="phone" Type="nvarchar" Mode="In" />
+  </Function>
+  <EntityContainer Name="Ember_medical_service_dbModelStoreContainer">
+    <EntitySet Name="Appointments" EntityType="Self.Appointments" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Attempted_delpayment" EntityType="Self.Attempted_delpayment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Bills" EntityType="Self.Bills" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Departments" EntityType="Self.Departments" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Nurses" EntityType="Self.Nurses" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Patients" EntityType="Self.Patients" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Payments" EntityType="Self.Payments" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Physicians" EntityType="Self.Physicians" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Positions" EntityType="Self.Positions" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Receptionists" EntityType="Self.Receptionists" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Visits" EntityType="Self.Visits" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Appointment_View" EntityType="Self.Appointment_View" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Appointment_View].[Date] AS [Date], 
+    [Appointment_View].[Time] AS [Time], 
+    [Appointment_View].[FirstName] AS [FirstName], 
+    [Appointment_View].[LastName] AS [LastName], 
+    [Appointment_View].[title] AS [title], 
+    [Appointment_View].[Last_Name] AS [Last_Name]
+    FROM [dbo].[Appointment_View] AS [Appointment_View]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Female_Patients" EntityType="Self.Female_Patients" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Female_Patients].[id] AS [id], 
+    [Female_Patients].[FirstName] AS [FirstName], 
+    [Female_Patients].[LastName] AS [LastName], 
+    [Female_Patients].[Gender] AS [Gender], 
+    [Female_Patients].[D.O.B] AS [D.O.B], 
+    [Female_Patients].[Address] AS [Address], 
+    [Female_Patients].[Email] AS [Email], 
+    [Female_Patients].[Phone] AS [Phone]
+    FROM [dbo].[Female_Patients] AS [Female_Patients]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Nurses_Patient_View" EntityType="Self.Nurses_Patient_View" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Nurses_Patient_View].[Date] AS [Date], 
+    [Nurses_Patient_View].[Start] AS [Start], 
+    [Nurses_Patient_View].[FirstName] AS [FirstName], 
+    [Nurses_Patient_View].[LastName] AS [LastName], 
+    [Nurses_Patient_View].[Position_id] AS [Position_id], 
+    [Nurses_Patient_View].[Last_Name] AS [Last_Name]
+    FROM [dbo].[Nurses_Patient_View] AS [Nurses_Patient_View]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Paid_Patient" EntityType="Self.Paid_Patient" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Paid_Patient].[First Name] AS [First Name], 
+    [Paid_Patient].[Last Name] AS [Last Name], 
+    [Paid_Patient].[Pay Status] AS [Pay Status]
+    FROM [dbo].[Paid_Patient] AS [Paid_Patient]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Patients_address" EntityType="Self.Patients_address" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Patients_address].[LastName] AS [LastName], 
+    [Patients_address].[FirstName] AS [FirstName], 
+    [Patients_address].[Address] AS [Address]
+    FROM [dbo].[Patients_address] AS [Patients_address]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Patients_Age" EntityType="Self.Patients_Age" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Patients_Age].[FirstName] AS [FirstName], 
+    [Patients_Age].[LastName] AS [LastName], 
+    [Patients_Age].[age] AS [age]
+    FROM [dbo].[Patients_Age] AS [Patients_Age]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="staff_members" EntityType="Self.staff_members" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [staff_members].[FirstName] AS [FirstName], 
+    [staff_members].[Last_Name] AS [Last_Name]
+    FROM [dbo].[staff_members] AS [staff_members]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK__Appointme__Patie__49C3F6B7" Association="Self.FK__Appointme__Patie__49C3F6B7">
+      <End Role="Patients" EntitySet="Patients" />
+      <End Role="Appointments" EntitySet="Appointments" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Appointme__Physi__48CFD27E" Association="Self.FK__Appointme__Physi__48CFD27E">
+      <End Role="Physicians" EntitySet="Physicians" />
+      <End Role="Appointments" EntitySet="Appointments" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Bills__Patient_i__52593CB8" Association="Self.FK__Bills__Patient_i__52593CB8">
+      <End Role="Patients" EntitySet="Patients" />
+      <End Role="Bills" EntitySet="Bills" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Nurses__Departme__412EB0B6" Association="Self.FK__Nurses__Departme__412EB0B6">
+      <End Role="Departments" EntitySet="Departments" />
+      <End Role="Nurses" EntitySet="Nurses" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Nurses__Position__4222D4EF" Association="Self.FK__Nurses__Position__4222D4EF">
+      <End Role="Positions" EntitySet="Positions" />
+      <End Role="Nurses" EntitySet="Nurses" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Payments__Bill_i__5629CD9C" Association="Self.FK__Payments__Bill_i__5629CD9C">
+      <End Role="Bills" EntitySet="Bills" />
+      <End Role="Payments" EntitySet="Payments" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Payments__Patien__571DF1D5" Association="Self.FK__Payments__Patien__571DF1D5">
+      <End Role="Patients" EntitySet="Patients" />
+      <End Role="Payments" EntitySet="Payments" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Payments__Recept__5535A963" Association="Self.FK__Payments__Recept__5535A963">
+      <End Role="Receptionists" EntitySet="Receptionists" />
+      <End Role="Payments" EntitySet="Payments" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Physician__Depar__3D5E1FD2" Association="Self.FK__Physician__Depar__3D5E1FD2">
+      <End Role="Departments" EntitySet="Departments" />
+      <End Role="Physicians" EntitySet="Physicians" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Physician__Posit__3E52440B" Association="Self.FK__Physician__Posit__3E52440B">
+      <End Role="Positions" EntitySet="Positions" />
+      <End Role="Physicians" EntitySet="Physicians" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Reception__Depar__44FF419A" Association="Self.FK__Reception__Depar__44FF419A">
+      <End Role="Departments" EntitySet="Departments" />
+      <End Role="Receptionists" EntitySet="Receptionists" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Reception__Posit__45F365D3" Association="Self.FK__Reception__Posit__45F365D3">
+      <End Role="Positions" EntitySet="Positions" />
+      <End Role="Receptionists" EntitySet="Receptionists" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Visits__Nurse_id__4E88ABD4" Association="Self.FK__Visits__Nurse_id__4E88ABD4">
+      <End Role="Nurses" EntitySet="Nurses" />
+      <End Role="Visits" EntitySet="Visits" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Visits__Patient___4D94879B" Association="Self.FK__Visits__Patient___4D94879B">
+      <End Role="Patients" EntitySet="Patients" />
+      <End Role="Visits" EntitySet="Visits" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Visits__Physicia__4F7CD00D" Association="Self.FK__Visits__Physicia__4F7CD00D">
+      <End Role="Physicians" EntitySet="Physicians" />
+      <End Role="Visits" EntitySet="Visits" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Visits__Receptio__4CA06362" Association="Self.FK__Visits__Receptio__4CA06362">
+      <End Role="Receptionists" EntitySet="Receptionists" />
+      <End Role="Visits" EntitySet="Visits" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

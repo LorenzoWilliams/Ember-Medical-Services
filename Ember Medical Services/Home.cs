@@ -12,16 +12,14 @@ namespace Ember_Medical_Services
 {
     public partial class Home : Form
     {
+        private  Ember_medical_service_db ember_Medical_Service_Db;
+
         public Home()
         {
             InitializeComponent();
             customisedesign();
             hideSubMenu();
-        }
-
-        private void Home_Load(object sender, EventArgs e)
-        {
-    
+            ember_Medical_Services_Db = new Ember_medical_service_db();
         }
 
         private void customisedesign()
@@ -59,7 +57,8 @@ namespace Ember_Medical_Services
 
         private void bt_addpt_Click(object sender, EventArgs e)
         {
-            openChildForm(new Patient_Details());
+            var patientDetails = new Patient_Details();
+            patientDetails.Show();
         }
 
         private void Staff_Click(object sender, EventArgs e)
@@ -77,27 +76,42 @@ namespace Ember_Medical_Services
 
         }
 
-
-        private void b_staff_Click(object sender, EventArgs e)
-        {
-            openChildForm(new Staff_Details());
-        }
-
         private Form activeForm = null;
-        private void openChildForm(Form childForm)
-        {
-            if (activeForm != null)
-                activeForm.Close();
-            activeForm = childForm;
-            childForm.TopLevel = false;
-            childForm.FormBorderStyle = FormBorderStyle.None;
-            childForm.Dock = DockStyle.Fill;
-            panelChildForm.Controls.Add(childForm);
-            panelChildForm.Tag = childForm;
-            childForm.BringToFront();
-            childForm.Show();
+        private Ember_medical_service_db ember_Medical_Services_Db;
 
+
+
+        private void b_addStaff_Click(object sender, EventArgs e)
+        {
+            var staff_details = new Staff_Details();
+            staff_details.Show();
         }
 
+        private void b_makeAppointment_Click(object sender, EventArgs e)
+        {
+           
+            var scheduleAppointments = new ScheduleAppointment();
+            scheduleAppointments.Show();
+        }
+
+        private void b_ViewAppointment_Click(object sender, EventArgs e)
+        {
+            var viewAppointments =new ViewAppointments();
+            viewAppointments.Show();
+        }
+
+        private void bt_ptinfo_Click(object sender, EventArgs e)
+        {
+            var viewPatients = new ViewPatients();
+            viewPatients.Show();
+            //var ptinfo = ember_Medical_Service_Db.Patients.ToList();
+   
+        }
+
+        private void bt_viewStaff_Click(object sender, EventArgs e)
+        {
+            var viewStaffs = new ViewStaffs();
+            viewStaffs.Show();
+        }
     }
 }
