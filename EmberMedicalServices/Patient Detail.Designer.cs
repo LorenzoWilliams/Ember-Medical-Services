@@ -36,7 +36,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tb_firstname = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+<<<<<<< HEAD
             this.b_next = new System.Windows.Forms.Button();
+=======
+            this.BntPatientNxtPage = new System.Windows.Forms.Button();
+>>>>>>> b3c75119abddbf81475428ea1d0533eddc715aa6
             this.label6 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
@@ -150,6 +154,7 @@
             this.label1.TabIndex = 26;
             this.label1.Text = "First Name";
             // 
+<<<<<<< HEAD
             // b_next
             // 
             this.b_next.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -161,6 +166,18 @@
             this.b_next.Text = "Next Page";
             this.b_next.UseVisualStyleBackColor = true;
             this.b_next.Click += new System.EventHandler(this.b_next_Click);
+=======
+            // BntPatientNxtPage
+            // 
+            this.BntPatientNxtPage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BntPatientNxtPage.Location = new System.Drawing.Point(219, 622);
+            this.BntPatientNxtPage.Name = "BntPatientNxtPage";
+            this.BntPatientNxtPage.Size = new System.Drawing.Size(89, 26);
+            this.BntPatientNxtPage.TabIndex = 25;
+            this.BntPatientNxtPage.Text = "Next Page";
+            this.BntPatientNxtPage.UseVisualStyleBackColor = true;
+            this.BntPatientNxtPage.Click += new System.EventHandler(this.BntPatientNxtPage_Click);
+>>>>>>> b3c75119abddbf81475428ea1d0533eddc715aa6
             // 
             // label6
             // 
@@ -914,7 +931,11 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tb_firstname);
             this.Controls.Add(this.label1);
+<<<<<<< HEAD
             this.Controls.Add(this.b_next);
+=======
+            this.Controls.Add(this.BntPatientNxtPage);
+>>>>>>> b3c75119abddbf81475428ea1d0533eddc715aa6
             this.Name = "Patient_Details";
             this.Text = "Patient Details";
             this.Load += new System.EventHandler(this.Patient_Details_Load);
@@ -938,7 +959,11 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox tb_firstname;
         private System.Windows.Forms.Label label1;
+<<<<<<< HEAD
         private System.Windows.Forms.Button b_next;
+=======
+        private System.Windows.Forms.Button BntPatientNxtPage;
+>>>>>>> b3c75119abddbf81475428ea1d0533eddc715aa6
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label8;

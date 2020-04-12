@@ -12,7 +12,6 @@ C:\Users\Loren.DESKTOP-4ILE5PT\Desktop\Database Management\Ember Medical Service
 C:\Users\Loren.DESKTOP-4ILE5PT\Desktop\Database Management\Ember Medical Services\Ember Medical Services\obj\Debug\Ember_Medical_Services.Staff_Details.resources
 C:\Users\Loren.DESKTOP-4ILE5PT\Desktop\Database Management\Ember Medical Services\Ember Medical Services\obj\Debug\Ember_Medical_Services.Patient_Details.resources
 C:\Users\Loren.DESKTOP-4ILE5PT\Desktop\Database Management\Ember Medical Services\Ember Medical Services\obj\Debug\Ember_Medical_Services.Home.resources
-<<<<<<< HEAD
 C:\Users\Loren.DESKTOP-4ILE5PT\Desktop\Database Management\Ember Medical Services\Ember Medical Services\obj\Debug\Ember_Medical_Services.ScheduleAppointment.resources
 C:\Users\Loren.DESKTOP-4ILE5PT\Desktop\Database Management\Ember Medical Services\Ember Medical Services\obj\Debug\Ember_Medical_Services.ViewAppointments.resources
 C:\Users\Loren.DESKTOP-4ILE5PT\Desktop\Database Management\Ember Medical Services\Ember Medical Services\obj\Debug\Ember_Medical_Services.ViewPatients.resources
@@ -22,50 +21,3 @@ C:\Users\Loren.DESKTOP-4ILE5PT\Desktop\Database Management\Ember Medical Service
 C:\Users\Loren.DESKTOP-4ILE5PT\Desktop\Database Management\Ember Medical Services\Ember Medical Services\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Loren.DESKTOP-4ILE5PT\Desktop\Database Management\Ember Medical Services\Ember Medical Services\obj\Debug\Ember Medical Services.csproj.CopyComplete
 C:\Users\Loren.DESKTOP-4ILE5PT\Desktop\Database Management\Ember Medical Services\Ember Medical Services\obj\Debug\Ember_Medical_Services.ViewStaffs.resources
-=======
-C:\Users\Lon-Nix\Desktop\Ember Medical\Ember-Medical-Services\Ember Medical Services\bin\Debug\Ember Medical Services.exe.config
-C:\Users\Lon-Nix\Desktop\Ember Medical\Ember-Medical-Services\Ember Medical Services\bin\Debug\Ember Medical Services.exe
-C:\Users\Lon-Nix\Desktop\Ember Medical\Ember-Medical-Services\Ember Medical Services\bin\Debug\Ember Medical Services.pdb
-C:\Users\Lon-Nix\Desktop\Ember Medical\Ember-Medical-Services\Ember Medical Services\obj\Debug\Ember Medical Services.csprojAssemblyReference.cache
-C:\Users\Lon-Nix\Desktop\Ember Medical\Ember-Medical-Services\Ember Medical Services\obj\Debug\Ember_Medical_Services.Home.resources
-C:\Users\Lon-Nix\Desktop\Ember Medical\Ember-Medical-Services\Ember Medical Services\obj\Debug\Ember_Medical_Services.Patient_Details2.resources
-C:\Users\Lon-Nix\Desktop\Ember Medical\Ember-Medical-Services\Ember Medical Services\obj\Debug\Ember_Medical_Services.Staff_Details.resources
-C:\Users\Lon-Nix\Desktop\Ember Medical\Ember-Medical-Services\Ember Medical Services\obj\Debug\Ember_Medical_Services.Patient_Details.resources
-C:\Users\Lon-Nix\Desktop\Ember Medical\Ember-Medical-Services\Ember Medical Services\obj\Debug\Ember_Medical_Services.Signup.resources
-C:\Users\Lon-Nix\Desktop\Ember Medical\Ember-Medical-Services\Ember Medical Services\obj\Debug\Ember_Medical_Services.Login.resources
-C:\Users\Lon-Nix\Desktop\Ember Medical\Ember-Medical-Services\Ember Medical Services\obj\Debug\Ember_Medical_Services.Properties.Resources.resources
-C:\Users\Lon-Nix\Desktop\Ember Medical\Ember-Medical-Services\Ember Medical Services\obj\Debug\Ember Medical Services.csproj.GenerateResource.cache
-C:\Users\Lon-Nix\Desktop\Ember Medical\Ember-Medical-Services\Ember Medical Services\obj\Debug\Ember Medical Services.exe
-C:\Users\Lon-Nix\Desktop\Ember Medical\Ember-Medical-Services\Ember Medical Services\obj\Debug\Ember Medical Services.pdb
-C:\Users\Lon-Nix\Desktop\Ember Medical\Ember-Medical-Services\Ember Medical Services\obj\Debug\Ember_Medical_Services.ScheduleAppointment.resources
-C:\Users\Lon-Nix\Desktop\Ember Medical\Ember-Medical-Services\Ember Medical Services\obj\Debug\Ember_Medical_Services.ViewPatients.resources
-C:\Users\Lon-Nix\Desktop\Ember Medical\Ember-Medical-Services\Ember Medical Services\obj\Debug\Ember_Medical_Services.ViewStaff.resources
-C:\Users\Lon-Nix\Desktop\Ember Medical\Ember-Medical-Services\Ember Medical Services\obj\Debug\Ember_Medical_Services.MedicalHistory.resources
-C:\Users\Lon-Nix\Desktop\Ember Medical\Ember-Medical-Services\Ember Medical Services\obj\Debug\Ember_Medical_Services.MedicalInfo.resources
-C:\Users\Lon-Nix\Desktop\Ember Medical\Ember-Medical-Services\Ember Medical Services\obj\Debug\Ember_Medical_Services.ViewAppointments.resources
-C:\Users\Lon-Nix\Desktop\Ember-Medical-Services\Ember Medical Services\obj\Debug\Ember Medical Services.csprojAssemblyReference.cache
-C:\Users\Lon-Nix\Desktop\Ember-Medical-Services\Ember Medical Services\obj\Debug\Ember_Medical_Services.Home.resources
-C:\Users\Lon-Nix\Desktop\Ember-Medical-Services\Ember Medical Services\obj\Debug\Ember_Medical_Services.MedicalHistory.resources
-C:\Users\Lon-Nix\Desktop\Ember-Medical-Services\Ember Medical Services\obj\Debug\Ember_Medical_Services.MedicalInfo.resources
-C:\Users\Lon-Nix\Desktop\Ember-Medical-Services\Ember Medical Services\obj\Debug\Ember_Medical_Services.Patient_Details2.resources
-C:\Users\Lon-Nix\Desktop\Ember-Medical-Services\Ember Medical Services\obj\Debug\Ember_Medical_Services.Staff_Details.resources
-C:\Users\Lon-Nix\Desktop\Ember-Medical-Services\Ember Medical Services\obj\Debug\Ember_Medical_Services.Patient_Details.resources
-C:\Users\Lon-Nix\Desktop\Ember-Medical-Services\Ember Medical Services\obj\Debug\Ember_Medical_Services.Signup.resources
-C:\Users\Lon-Nix\Desktop\Ember-Medical-Services\Ember Medical Services\obj\Debug\Ember_Medical_Services.Login.resources
-C:\Users\Lon-Nix\Desktop\Ember-Medical-Services\Ember Medical Services\obj\Debug\Ember_Medical_Services.Properties.Resources.resources
-C:\Users\Lon-Nix\Desktop\Ember-Medical-Services\Ember Medical Services\obj\Debug\Ember_Medical_Services.ViewAppointments.resources
-C:\Users\Lon-Nix\Desktop\Ember-Medical-Services\Ember Medical Services\obj\Debug\Ember_Medical_Services.ViewPatients.resources
-C:\Users\Lon-Nix\Desktop\Ember-Medical-Services\Ember Medical Services\obj\Debug\Ember_Medical_Services.ViewStaff.resources
-C:\Users\Lon-Nix\Desktop\Ember-Medical-Services\Ember Medical Services\obj\Debug\Ember Medical Services.csproj.GenerateResource.cache
-C:\Users\Lon-Nix\Desktop\Ember-Medical-Services\Ember Medical Services\obj\Debug\Ember Medical Services.exe
-C:\Users\Lon-Nix\Desktop\Ember-Medical-Services\Ember Medical Services\obj\Debug\Ember Medical Services.pdb
-C:\Users\Lon-Nix\Desktop\Ember-Medical-Services\Ember Medical Services\bin\Debug\Ember Medical Services.exe.config
-C:\Users\Lon-Nix\Desktop\Ember-Medical-Services\Ember Medical Services\bin\Debug\Ember Medical Services.exe
-C:\Users\Lon-Nix\Desktop\Ember-Medical-Services\Ember Medical Services\bin\Debug\Ember Medical Services.pdb
-C:\Users\Lon-Nix\Desktop\Ember-Medical-Services\Ember Medical Services\bin\Debug\EntityFramework.dll
-C:\Users\Lon-Nix\Desktop\Ember-Medical-Services\Ember Medical Services\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\Lon-Nix\Desktop\Ember-Medical-Services\Ember Medical Services\bin\Debug\EntityFramework.xml
-C:\Users\Lon-Nix\Desktop\Ember-Medical-Services\Ember Medical Services\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\Lon-Nix\Desktop\Ember-Medical-Services\Ember Medical Services\obj\Debug\Ember_Medical_Services.ScheduleAppointment.resources
-C:\Users\Lon-Nix\Desktop\Ember-Medical-Services\Ember Medical Services\obj\Debug\Ember Medical Services.csproj.CopyComplete
->>>>>>> b3c75119abddbf81475428ea1d0533eddc715aa6

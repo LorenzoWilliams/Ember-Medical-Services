@@ -1,2 +1,219 @@
 
-*.lock
+.vs/Debug/DesignTimeResolveAssemblyReferences.cache
+.vs/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+.vs/Debug/Ember Medical Services.csproj.FileListAbsolute.txt
+.vs/Debug/Ember Medical Services.csproj.GenerateResource.cache
+.vs/Debug/Ember Medical Services.exe
+.vs/Debug/Ember Medical Services.exe.config
+.vs/Debug/Ember Medical Services.pdb
+.vs/Debug/Ember_Medical_Services.Home.resources
+.vs/Debug/Ember_Medical_Services.Login.resources
+.vs/Debug/Ember_Medical_Services.Patient_Details.resources
+.vs/Debug/Ember_Medical_Services.Patient_Details2.resources
+.vs/Debug/Ember_Medical_Services.Properties.Resources.resources
+.vs/Debug/Ember_Medical_Services.Signup.resources
+.vs/Debug/Ember_Medical_Services.Staff_Details.resources
+.vs/Ember Medical Services/Debug/Ember Medical Services.exe
+.vs/Ember Medical Services/Debug/Ember Medical Services.pdb
+.vs/Ember Medical Services/v16/.suo
+.vs/Ember Medical Services/v16/Server/sqlite3/storage.ide
+.vs/v16/.suo
+.vs/v16/Server/sqlite3/db.lock
+.vs/v16/Server/sqlite3/storage.ide
+Ember Medical Services.sln
+Ember medical Services.zip
+Ember Medical Services/App.config
+Ember Medical Services/Appointment.cs
+Ember Medical Services/Appointment_View.cs
+Ember Medical Services/AppointmentRange_Result.cs
+Ember Medical Services/AppointmentScheduled_Result.cs
+Ember Medical Services/Attempted_delpayment.cs
+Ember Medical Services/Bill.cs
+Ember Medical Services/bin/Debug/Ember Medical Services.exe
+Ember Medical Services/bin/Debug/Ember Medical Services.exe.config
+Ember Medical Services/bin/Debug/Ember Medical Services.pdb
+Ember Medical Services/bin/Debug/EntityFramework.dll
+Ember Medical Services/bin/Debug/EntityFramework.SqlServer.dll
+Ember Medical Services/bin/Debug/EntityFramework.SqlServer.xml
+Ember Medical Services/bin/Debug/EntityFramework.xml
+Ember Medical Services/Department.cs
+Ember Medical Services/Ember Medical Services.csproj
+Ember Medical Services/EmberMedicalService_db.Context.cs
+Ember Medical Services/EmberMedicalService_db.Context.tt
+Ember Medical Services/EmberMedicalService_db.cs
+Ember Medical Services/EmberMedicalService_db.Designer.cs
+Ember Medical Services/EmberMedicalService_db.edmx
+Ember Medical Services/EmberMedicalService_db.edmx.diagram
+Ember Medical Services/EmberMedicalService_db.tt
+Ember Medical Services/Female_Patients.cs
+Ember Medical Services/Home.cs
+Ember Medical Services/Home.Designer.cs
+Ember Medical Services/Home.resx
+Ember Medical Services/Login.cs
+Ember Medical Services/Login.Designer.cs
+Ember Medical Services/Login.resx
+Ember Medical Services/MedicalHistory.cs
+Ember Medical Services/MedicalHistory.Designer.cs
+Ember Medical Services/MedicalHistory.resx
+Ember Medical Services/MedicalInfo.cs
+Ember Medical Services/MedicalInfo.Designer.cs
+Ember Medical Services/MedicalInfo.resx
+Ember Medical Services/Model1.Context.cs
+Ember Medical Services/Model1.Context.tt
+Ember Medical Services/Model1.cs
+Ember Medical Services/Model1.Designer.cs
+Ember Medical Services/Model1.edmx
+Ember Medical Services/Model1.edmx.diagram
+Ember Medical Services/Model1.tt
+Ember Medical Services/Nurse.cs
+Ember Medical Services/Nurses_Patient_View.cs
+Ember Medical Services/obj/Debug/DesignTimeResolveAssemblyReferences.cache
+Ember Medical Services/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+Ember Medical Services/obj/Debug/edmxResourcesToEmbed/EmberMedicalService_db.csdl
+Ember Medical Services/obj/Debug/edmxResourcesToEmbed/EmberMedicalService_db.msl
+Ember Medical Services/obj/Debug/edmxResourcesToEmbed/EmberMedicalService_db.ssdl
+Ember Medical Services/obj/Debug/edmxResourcesToEmbed/EmberMedicalServicesDB.csdl
+Ember Medical Services/obj/Debug/edmxResourcesToEmbed/EmberMedicalServicesDB.msl
+Ember Medical Services/obj/Debug/edmxResourcesToEmbed/EmberMedicalServicesDB.ssdl
+Ember Medical Services/obj/Debug/edmxResourcesToEmbed/Model1.csdl
+Ember Medical Services/obj/Debug/edmxResourcesToEmbed/Model1.msl
+Ember Medical Services/obj/Debug/edmxResourcesToEmbed/Model1.ssdl
+Ember Medical Services/obj/Debug/Ember Medical Services.csproj.CopyComplete
+Ember Medical Services/obj/Debug/Ember Medical Services.csproj.FileListAbsolute.txt
+Ember Medical Services/obj/Debug/Ember Medical Services.csproj.GenerateResource.cache
+Ember Medical Services/obj/Debug/Ember Medical Services.csprojAssemblyReference.cache
+Ember Medical Services/obj/Debug/Ember Medical Services.exe
+Ember Medical Services/obj/Debug/Ember Medical Services.pdb
+Ember Medical Services/obj/Debug/Ember_Medical_Services.Home.resources
+Ember Medical Services/obj/Debug/Ember_Medical_Services.Login.resources
+Ember Medical Services/obj/Debug/Ember_Medical_Services.MedicalHistory.resources
+Ember Medical Services/obj/Debug/Ember_Medical_Services.MedicalInfo.resources
+Ember Medical Services/obj/Debug/Ember_Medical_Services.Patient_Details.resources
+Ember Medical Services/obj/Debug/Ember_Medical_Services.Patient_Details2.resources
+Ember Medical Services/obj/Debug/Ember_Medical_Services.Properties.Resources.resources
+Ember Medical Services/obj/Debug/Ember_Medical_Services.ScheduleAppointment.resources
+Ember Medical Services/obj/Debug/Ember_Medical_Services.Signup.resources
+Ember Medical Services/obj/Debug/Ember_Medical_Services.Staff_Details.resources
+Ember Medical Services/obj/Debug/Ember_Medical_Services.ViewAppointments.resources
+Ember Medical Services/obj/Debug/Ember_Medical_Services.ViewPatients.resources
+Ember Medical Services/obj/Debug/Ember_Medical_Services.ViewStaff.resources
+Ember Medical Services/obj/Debug/Ember_Medical_Services.ViewStaffs.resources
+Ember Medical Services/obj/Debug/TempPE/EmberMedicalService_db.Context.cs.dll
+Ember Medical Services/obj/Debug/TempPE/EmberMedicalService_db.cs.dll
+Ember Medical Services/obj/Debug/TempPE/EmberMedicalService_db.Designer.cs.dll
+Ember Medical Services/obj/Debug/TempPE/EmberMedicalServicesDB.Context.cs.dll
+Ember Medical Services/obj/Debug/TempPE/EmberMedicalServicesDB.cs.dll
+Ember Medical Services/obj/Debug/TempPE/EmberMedicalServicesDB.Designer.cs.dll
+Ember Medical Services/obj/Debug/TempPE/Model1.Context.cs.dll
+Ember Medical Services/obj/Debug/TempPE/Model1.cs.dll
+Ember Medical Services/obj/Debug/TempPE/Model1.Designer.cs.dll
+Ember Medical Services/obj/Debug/TempPE/Patient_DataSet.Designer.cs.dll
+Ember Medical Services/packages.config
+Ember Medical Services/Paid_Patient.cs
+Ember Medical Services/Patient Detail.cs
+Ember Medical Services/Patient Detail.Designer.cs
+Ember Medical Services/Patient Detail.resx
+Ember Medical Services/Patient Detail2.cs
+Ember Medical Services/Patient Detail2.Designer.cs
+Ember Medical Services/Patient Detail2.resx
+Ember Medical Services/Patient.cs
+Ember Medical Services/Patient_DataSet.Designer.cs
+Ember Medical Services/Patient_DataSet.xsc
+Ember Medical Services/Patient_DataSet.xsd
+Ember Medical Services/Patient_DataSet.xss
+Ember Medical Services/Patients_address.cs
+Ember Medical Services/Patients_Age.cs
+Ember Medical Services/PatientsList_Result.cs
+Ember Medical Services/Payment.cs
+Ember Medical Services/Physician.cs
+Ember Medical Services/Position.cs
+Ember Medical Services/Program.cs
+Ember Medical Services/Properties/AssemblyInfo.cs
+Ember Medical Services/Properties/Resources.Designer.cs
+Ember Medical Services/Properties/Resources.resx
+Ember Medical Services/Properties/Settings.Designer.cs
+Ember Medical Services/Properties/Settings.settings
+Ember Medical Services/Receptionist.cs
+Ember Medical Services/ScheduleAppointment.cs
+Ember Medical Services/ScheduleAppointment.Designer.cs
+Ember Medical Services/ScheduleAppointment.resx
+Ember Medical Services/Signup.cs
+Ember Medical Services/Signup.Designer.cs
+Ember Medical Services/Signup.resx
+Ember Medical Services/Staff Details.cs
+Ember Medical Services/Staff Details.Designer.cs
+Ember Medical Services/Staff Details.resx
+Ember Medical Services/staff_members.cs
+Ember Medical Services/ViewAppointments.cs
+Ember Medical Services/ViewAppointments.Designer.cs
+Ember Medical Services/ViewAppointments.resx
+Ember Medical Services/ViewPatients.cs
+Ember Medical Services/ViewPatients.Designer.cs
+Ember Medical Services/ViewPatients.resx
+Ember Medical Services/ViewStaff.cs
+Ember Medical Services/ViewStaff.Designer.cs
+Ember Medical Services/ViewStaff.resx
+Ember Medical Services/ViewStaffs.cs
+Ember Medical Services/ViewStaffs.Designer.cs
+Ember Medical Services/ViewStaffs.resx
+Ember Medical Services/Visit.cs
+EMS_DB/.vs/EMS_DB/v15/.ssms_suo
+EMS_DB/.vs/slnx.sqlite
+EMS_DB/.vs/VSWorkspaceState.json
+EMS_DB/All Views.sql
+EMS_DB/Appointment View.sql
+EMS_DB/Appointment.sql
+EMS_DB/Appointments_index.sql
+EMS_DB/Appointments_list.sql
+EMS_DB/Delete Patient Records.sql
+EMS_DB/DeletePhysician.sql
+EMS_DB/Ember medical.sql
+EMS_DB/Female Patients View.sql
+EMS_DB/History(patients_visits_join).sql
+EMS_DB/Inline AppointmentRange.sql
+EMS_DB/Inline AppointmentScheduled.sql
+EMS_DB/Inline Scheduled.sql
+EMS_DB/InputPatients.sql
+EMS_DB/Multi-Statement Persons.sql
+EMS_DB/noPaymentDelete.sql
+EMS_DB/Nurse Patient_View.sql
+EMS_DB/Paid Patient View.sql
+EMS_DB/Patient Records.sql
+EMS_DB/PatientList.sql
+EMS_DB/Patients Age.sql
+EMS_DB/Patients_address View.sql
+EMS_DB/Patients_index.sql
+EMS_DB/ScalarMaxHeight.sql
+EMS_DB/ScalarMaxTotal.sql
+EMS_DB/Select Queries.sql
+EMS_DB/Staff Member View.sql
+EMS_DB/tableforattempdelete.sql
+EMS_DB/UNIQUE_Email_Only.sql
+EMS_DB/Update Patients Records.sql
+EMS_DB/UpdatePatientAddress.sql
+EMS_DB/Validation_GENDER_M_or_F_ONLY.sql
+EMS_DB/Wildcard Address.sql
+EMS_DB/Wildcard height.sql
+EMS_DB/Wildcard Physicians Female.sql
+EMS_DB/Wildcard Physicians.sql
+EMS_DB/Wildcard Position.sql
+packages/EntityFramework.6.2.0/Content/net40/App.config.transform
+packages/EntityFramework.6.2.0/Content/net40/Web.config.transform
+packages/EntityFramework.6.2.0/EntityFramework.6.2.0.nupkg
+packages/EntityFramework.6.2.0/lib/net40/EntityFramework.dll
+packages/EntityFramework.6.2.0/lib/net40/EntityFramework.SqlServer.dll
+packages/EntityFramework.6.2.0/lib/net40/EntityFramework.SqlServer.xml
+packages/EntityFramework.6.2.0/lib/net40/EntityFramework.xml
+packages/EntityFramework.6.2.0/lib/net45/EntityFramework.dll
+packages/EntityFramework.6.2.0/lib/net45/EntityFramework.SqlServer.dll
+packages/EntityFramework.6.2.0/lib/net45/EntityFramework.SqlServer.xml
+packages/EntityFramework.6.2.0/lib/net45/EntityFramework.xml
+packages/EntityFramework.6.2.0/tools/about_EntityFramework.help.txt
+packages/EntityFramework.6.2.0/tools/EntityFramework.PowerShell.dll
+packages/EntityFramework.6.2.0/tools/EntityFramework.PowerShell.Utility.dll
+packages/EntityFramework.6.2.0/tools/EntityFramework.psd1
+packages/EntityFramework.6.2.0/tools/EntityFramework.psm1
+packages/EntityFramework.6.2.0/tools/init.ps1
+packages/EntityFramework.6.2.0/tools/install.ps1
+packages/EntityFramework.6.2.0/tools/migrate.exe
+README.md
