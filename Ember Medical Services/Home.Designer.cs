@@ -34,15 +34,16 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.b_MedicalHistory = new System.Windows.Forms.Button();
-            this.B_bills = new System.Windows.Forms.Button();
+            this.b_Report = new System.Windows.Forms.Button();
+            this.button13 = new System.Windows.Forms.Button();
             this.panel_appointment = new System.Windows.Forms.Panel();
-            this.b_ViewAppointment = new System.Windows.Forms.Button();
+            this.b_cancelappointment = new System.Windows.Forms.Button();
+            this.b_rescheduleAppointment = new System.Windows.Forms.Button();
             this.b_makeAppointment = new System.Windows.Forms.Button();
             this.Appointment = new System.Windows.Forms.Button();
             this.panel_staff = new System.Windows.Forms.Panel();
-            this.bt_viewStaff = new System.Windows.Forms.Button();
-            this.b_addStaff = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             this.Staff = new System.Windows.Forms.Button();
             this.panel_patient = new System.Windows.Forms.Panel();
             this.bt_ptinfo = new System.Windows.Forms.Button();
@@ -50,15 +51,11 @@
             this.Patient = new System.Windows.Forms.Button();
             this.panel1logo = new System.Windows.Forms.Panel();
             this.panelChildForm = new System.Windows.Forms.Panel();
-            this.l_welcome = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.sidepanel.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel_appointment.SuspendLayout();
             this.panel_staff.SuspendLayout();
             this.panel_patient.SuspendLayout();
-            this.panelChildForm.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // sidepanel
@@ -67,8 +64,8 @@
             this.sidepanel.BackColor = System.Drawing.Color.RoyalBlue;
             this.sidepanel.Controls.Add(this.panel2);
             this.sidepanel.Controls.Add(this.button4);
-            this.sidepanel.Controls.Add(this.b_MedicalHistory);
-            this.sidepanel.Controls.Add(this.B_bills);
+            this.sidepanel.Controls.Add(this.b_Report);
+            this.sidepanel.Controls.Add(this.button13);
             this.sidepanel.Controls.Add(this.panel_appointment);
             this.sidepanel.Controls.Add(this.Appointment);
             this.sidepanel.Controls.Add(this.panel_staff);
@@ -88,7 +85,7 @@
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.button2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 624);
+            this.panel2.Location = new System.Drawing.Point(0, 660);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(220, 82);
             this.panel2.TabIndex = 10;
@@ -134,76 +131,91 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(0, 579);
+            this.button4.Location = new System.Drawing.Point(0, 615);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(220, 45);
             this.button4.TabIndex = 9;
             this.button4.Text = "About";
             this.button4.UseVisualStyleBackColor = true;
             // 
-            // b_MedicalHistory
+            // b_Report
             // 
-            this.b_MedicalHistory.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("b_MedicalHistory.BackgroundImage")));
-            this.b_MedicalHistory.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.b_MedicalHistory.Dock = System.Windows.Forms.DockStyle.Top;
-            this.b_MedicalHistory.FlatAppearance.BorderSize = 0;
-            this.b_MedicalHistory.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
-            this.b_MedicalHistory.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.b_MedicalHistory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.b_MedicalHistory.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.b_MedicalHistory.ForeColor = System.Drawing.Color.White;
-            this.b_MedicalHistory.Location = new System.Drawing.Point(0, 534);
-            this.b_MedicalHistory.Name = "b_MedicalHistory";
-            this.b_MedicalHistory.Size = new System.Drawing.Size(220, 45);
-            this.b_MedicalHistory.TabIndex = 8;
-            this.b_MedicalHistory.Text = "             Medical History";
-            this.b_MedicalHistory.UseVisualStyleBackColor = true;
-            this.b_MedicalHistory.Click += new System.EventHandler(this.b_Report_Click);
+            this.b_Report.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("b_Report.BackgroundImage")));
+            this.b_Report.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.b_Report.Dock = System.Windows.Forms.DockStyle.Top;
+            this.b_Report.FlatAppearance.BorderSize = 0;
+            this.b_Report.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
+            this.b_Report.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.b_Report.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.b_Report.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.b_Report.ForeColor = System.Drawing.Color.White;
+            this.b_Report.Location = new System.Drawing.Point(0, 570);
+            this.b_Report.Name = "b_Report";
+            this.b_Report.Size = new System.Drawing.Size(220, 45);
+            this.b_Report.TabIndex = 8;
+            this.b_Report.Text = "Report";
+            this.b_Report.UseVisualStyleBackColor = true;
+            this.b_Report.Click += new System.EventHandler(this.b_Report_Click);
             // 
-            // B_bills
+            // button13
             // 
-            this.B_bills.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("B_bills.BackgroundImage")));
-            this.B_bills.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.B_bills.Dock = System.Windows.Forms.DockStyle.Top;
-            this.B_bills.FlatAppearance.BorderSize = 0;
-            this.B_bills.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
-            this.B_bills.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.B_bills.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.B_bills.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.B_bills.ForeColor = System.Drawing.Color.White;
-            this.B_bills.Location = new System.Drawing.Point(0, 489);
-            this.B_bills.Name = "B_bills";
-            this.B_bills.Size = new System.Drawing.Size(220, 45);
-            this.B_bills.TabIndex = 7;
-            this.B_bills.Text = "Bills";
-            this.B_bills.UseVisualStyleBackColor = true;
+            this.button13.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button13.BackgroundImage")));
+            this.button13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button13.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button13.FlatAppearance.BorderSize = 0;
+            this.button13.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
+            this.button13.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button13.ForeColor = System.Drawing.Color.White;
+            this.button13.Location = new System.Drawing.Point(0, 525);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(220, 45);
+            this.button13.TabIndex = 7;
+            this.button13.Text = "Expenses";
+            this.button13.UseVisualStyleBackColor = true;
             // 
             // panel_appointment
             // 
             this.panel_appointment.BackColor = System.Drawing.Color.MidnightBlue;
-            this.panel_appointment.Controls.Add(this.b_ViewAppointment);
+            this.panel_appointment.Controls.Add(this.b_cancelappointment);
+            this.panel_appointment.Controls.Add(this.b_rescheduleAppointment);
             this.panel_appointment.Controls.Add(this.b_makeAppointment);
             this.panel_appointment.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_appointment.Location = new System.Drawing.Point(0, 407);
             this.panel_appointment.Name = "panel_appointment";
-            this.panel_appointment.Size = new System.Drawing.Size(220, 82);
+            this.panel_appointment.Size = new System.Drawing.Size(220, 118);
             this.panel_appointment.TabIndex = 6;
             // 
-            // b_ViewAppointment
+            // b_cancelappointment
             // 
-            this.b_ViewAppointment.Dock = System.Windows.Forms.DockStyle.Top;
-            this.b_ViewAppointment.FlatAppearance.BorderSize = 0;
-            this.b_ViewAppointment.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
-            this.b_ViewAppointment.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.b_ViewAppointment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.b_ViewAppointment.ForeColor = System.Drawing.Color.White;
-            this.b_ViewAppointment.Location = new System.Drawing.Point(0, 38);
-            this.b_ViewAppointment.Name = "b_ViewAppointment";
-            this.b_ViewAppointment.Size = new System.Drawing.Size(220, 38);
-            this.b_ViewAppointment.TabIndex = 1;
-            this.b_ViewAppointment.Text = "View Appointment";
-            this.b_ViewAppointment.UseVisualStyleBackColor = true;
-            this.b_ViewAppointment.Click += new System.EventHandler(this.b_ViewAppointment_Click);
+            this.b_cancelappointment.Dock = System.Windows.Forms.DockStyle.Top;
+            this.b_cancelappointment.FlatAppearance.BorderSize = 0;
+            this.b_cancelappointment.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
+            this.b_cancelappointment.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.b_cancelappointment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.b_cancelappointment.ForeColor = System.Drawing.Color.White;
+            this.b_cancelappointment.Location = new System.Drawing.Point(0, 76);
+            this.b_cancelappointment.Name = "b_cancelappointment";
+            this.b_cancelappointment.Size = new System.Drawing.Size(220, 38);
+            this.b_cancelappointment.TabIndex = 2;
+            this.b_cancelappointment.Text = "Cancel Appointment";
+            this.b_cancelappointment.UseVisualStyleBackColor = true;
+            // 
+            // b_rescheduleAppointment
+            // 
+            this.b_rescheduleAppointment.Dock = System.Windows.Forms.DockStyle.Top;
+            this.b_rescheduleAppointment.FlatAppearance.BorderSize = 0;
+            this.b_rescheduleAppointment.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
+            this.b_rescheduleAppointment.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.b_rescheduleAppointment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.b_rescheduleAppointment.ForeColor = System.Drawing.Color.White;
+            this.b_rescheduleAppointment.Location = new System.Drawing.Point(0, 38);
+            this.b_rescheduleAppointment.Name = "b_rescheduleAppointment";
+            this.b_rescheduleAppointment.Size = new System.Drawing.Size(220, 38);
+            this.b_rescheduleAppointment.TabIndex = 1;
+            this.b_rescheduleAppointment.Text = "Reschedule Appointment";
+            this.b_rescheduleAppointment.UseVisualStyleBackColor = true;
             // 
             // b_makeAppointment
             // 
@@ -219,7 +231,6 @@
             this.b_makeAppointment.TabIndex = 0;
             this.b_makeAppointment.Text = "Make Appointment";
             this.b_makeAppointment.UseVisualStyleBackColor = true;
-            this.b_makeAppointment.Click += new System.EventHandler(this.b_makeAppointment_Click);
             // 
             // Appointment
             // 
@@ -243,45 +254,43 @@
             // panel_staff
             // 
             this.panel_staff.BackColor = System.Drawing.Color.MidnightBlue;
-            this.panel_staff.Controls.Add(this.bt_viewStaff);
-            this.panel_staff.Controls.Add(this.b_addStaff);
+            this.panel_staff.Controls.Add(this.button3);
+            this.panel_staff.Controls.Add(this.button6);
             this.panel_staff.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_staff.Location = new System.Drawing.Point(0, 280);
             this.panel_staff.Name = "panel_staff";
             this.panel_staff.Size = new System.Drawing.Size(220, 82);
             this.panel_staff.TabIndex = 4;
             // 
-            // bt_viewStaff
+            // button3
             // 
-            this.bt_viewStaff.Dock = System.Windows.Forms.DockStyle.Top;
-            this.bt_viewStaff.FlatAppearance.BorderSize = 0;
-            this.bt_viewStaff.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
-            this.bt_viewStaff.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.bt_viewStaff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_viewStaff.ForeColor = System.Drawing.Color.White;
-            this.bt_viewStaff.Location = new System.Drawing.Point(0, 38);
-            this.bt_viewStaff.Name = "bt_viewStaff";
-            this.bt_viewStaff.Size = new System.Drawing.Size(220, 38);
-            this.bt_viewStaff.TabIndex = 1;
-            this.bt_viewStaff.Text = "Staff Information";
-            this.bt_viewStaff.UseVisualStyleBackColor = true;
-            this.bt_viewStaff.Click += new System.EventHandler(this.bt_viewStaff_Click);
+            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(0, 38);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(220, 38);
+            this.button3.TabIndex = 1;
+            this.button3.Text = "Patient Information";
+            this.button3.UseVisualStyleBackColor = true;
             // 
-            // b_addStaff
+            // button6
             // 
-            this.b_addStaff.Dock = System.Windows.Forms.DockStyle.Top;
-            this.b_addStaff.FlatAppearance.BorderSize = 0;
-            this.b_addStaff.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
-            this.b_addStaff.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.b_addStaff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.b_addStaff.ForeColor = System.Drawing.Color.White;
-            this.b_addStaff.Location = new System.Drawing.Point(0, 0);
-            this.b_addStaff.Name = "b_addStaff";
-            this.b_addStaff.Size = new System.Drawing.Size(220, 38);
-            this.b_addStaff.TabIndex = 0;
-            this.b_addStaff.Text = "Add Staff";
-            this.b_addStaff.UseVisualStyleBackColor = true;
-            this.b_addStaff.Click += new System.EventHandler(this.b_addStaff_Click);
+            this.button6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
+            this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.ForeColor = System.Drawing.Color.White;
+            this.button6.Location = new System.Drawing.Point(0, 0);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(220, 38);
+            this.button6.TabIndex = 0;
+            this.button6.Text = "Add Patient";
+            this.button6.UseVisualStyleBackColor = true;
             // 
             // Staff
             // 
@@ -327,7 +336,6 @@
             this.bt_ptinfo.TabIndex = 1;
             this.bt_ptinfo.Text = "Patient Information";
             this.bt_ptinfo.UseVisualStyleBackColor = true;
-            this.bt_ptinfo.Click += new System.EventHandler(this.bt_ptinfo_Click);
             // 
             // bt_addpt
             // 
@@ -377,35 +385,11 @@
             // 
             // panelChildForm
             // 
-            this.panelChildForm.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panelChildForm.BackColor = System.Drawing.Color.White;
-            this.panelChildForm.Controls.Add(this.l_welcome);
-            this.panelChildForm.Controls.Add(this.pictureBox1);
-            this.panelChildForm.Location = new System.Drawing.Point(226, 0);
+            this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelChildForm.Location = new System.Drawing.Point(220, 0);
             this.panelChildForm.Name = "panelChildForm";
             this.panelChildForm.Size = new System.Drawing.Size(580, 749);
             this.panelChildForm.TabIndex = 1;
-         
-            // 
-            // l_welcome
-            // 
-            this.l_welcome.AutoSize = true;
-            this.l_welcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.l_welcome.ForeColor = System.Drawing.Color.SteelBlue;
-            this.l_welcome.Location = new System.Drawing.Point(195, 182);
-            this.l_welcome.Name = "l_welcome";
-            this.l_welcome.Size = new System.Drawing.Size(166, 25);
-            this.l_welcome.TabIndex = 1;
-            this.l_welcome.Text = "WELCOME TO";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(175, 235);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(208, 106);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // Home
             // 
@@ -415,15 +399,13 @@
             this.Controls.Add(this.panelChildForm);
             this.Controls.Add(this.sidepanel);
             this.Name = "Home";
-            this.Text = "WELCOME TO";
+            this.Text = "Ember Medical Services Management System";
+            this.Load += new System.EventHandler(this.Home_Load);
             this.sidepanel.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel_appointment.ResumeLayout(false);
             this.panel_staff.ResumeLayout(false);
             this.panel_patient.ResumeLayout(false);
-            this.panelChildForm.ResumeLayout(false);
-            this.panelChildForm.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -437,21 +419,20 @@
         private System.Windows.Forms.Button Patient;
         private System.Windows.Forms.Panel panel1logo;
         private System.Windows.Forms.Panel panel_appointment;
-        private System.Windows.Forms.Button b_ViewAppointment;
+        private System.Windows.Forms.Button b_cancelappointment;
+        private System.Windows.Forms.Button b_rescheduleAppointment;
         private System.Windows.Forms.Button b_makeAppointment;
         private System.Windows.Forms.Button Appointment;
         private System.Windows.Forms.Panel panel_staff;
-        private System.Windows.Forms.Button bt_viewStaff;
-        private System.Windows.Forms.Button b_addStaff;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button Staff;
-        private System.Windows.Forms.Button B_bills;
-        private System.Windows.Forms.Button b_MedicalHistory;
+        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Button b_Report;
         private System.Windows.Forms.Panel panelChildForm;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Label l_welcome;
-        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

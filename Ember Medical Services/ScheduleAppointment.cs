@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,6 +22,8 @@ namespace Ember_Medical_Services
     }
 }
 =======
+=======
+>>>>>>> parent of 1041264... Merge branch 'master' of https://github.com/LorenzoWilliams/Ember-Medical-Services
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -42,4 +45,7 @@ namespace Ember_Medical_Services
         
     }
 }
+<<<<<<< HEAD
 >>>>>>> b3c75119abddbf81475428ea1d0533eddc715aa6
+=======
+>>>>>>> parent of 1041264... Merge branch 'master' of https://github.com/LorenzoWilliams/Ember-Medical-Services

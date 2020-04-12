@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ﻿namespace Ember_Medical_Services
 {
     partial class ScheduleAppointment
@@ -221,6 +222,8 @@
         private System.Windows.Forms.Label label1;
     }
 =======
+=======
+>>>>>>> parent of 1041264... Merge branch 'master' of https://github.com/LorenzoWilliams/Ember-Medical-Services
 ﻿namespace Ember_Medical_Services
 {
     partial class ScheduleAppointment
@@ -487,5 +490,8 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox comboBox2;
     }
+<<<<<<< HEAD
 >>>>>>> b3c75119abddbf81475428ea1d0533eddc715aa6
+=======
+>>>>>>> parent of 1041264... Merge branch 'master' of https://github.com/LorenzoWilliams/Ember-Medical-Services
 }

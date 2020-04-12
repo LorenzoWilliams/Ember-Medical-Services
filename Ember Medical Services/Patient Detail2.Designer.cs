@@ -35,7 +35,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.checkedListBox2 = new System.Windows.Forms.CheckedListBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.BtnPatientSubmit = new System.Windows.Forms.Button();
+            this.b_submit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label5
@@ -50,7 +50,7 @@
             // 
             // checkedListBox1
             // 
-            this.checkedListBox1.BackColor = System.Drawing.Color.White;
+            this.checkedListBox1.BackColor = System.Drawing.SystemColors.MenuBar;
             this.checkedListBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.checkedListBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkedListBox1.FormattingEnabled = true;
@@ -94,9 +94,9 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(321, 65);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(143, 18);
+            this.label3.Size = new System.Drawing.Size(188, 18);
             this.label3.TabIndex = 117;
-            this.label3.Text = "Medical Condition";
+            this.label3.Text = "Present Medical History";
             // 
             // textBox1
             // 
@@ -108,7 +108,7 @@
             // 
             // checkedListBox2
             // 
-            this.checkedListBox2.BackColor = System.Drawing.Color.White;
+            this.checkedListBox2.BackColor = System.Drawing.SystemColors.MenuBar;
             this.checkedListBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.checkedListBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkedListBox2.FormattingEnabled = true;
@@ -140,25 +140,23 @@
             this.label1.TabIndex = 120;
             this.label1.Text = "Description";
             // 
-            // BtnPatientSubmit
+            // b_submit
             // 
-            this.BtnPatientSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnPatientSubmit.Location = new System.Drawing.Point(254, 672);
-            this.BtnPatientSubmit.Name = "BtnPatientSubmit";
-            this.BtnPatientSubmit.Size = new System.Drawing.Size(63, 26);
-            this.BtnPatientSubmit.TabIndex = 121;
-            this.BtnPatientSubmit.Text = "Submit";
-            this.BtnPatientSubmit.UseVisualStyleBackColor = true;
-            this.BtnPatientSubmit.Click += new System.EventHandler(this.BtnPatientSubmit_Click);
+            this.b_submit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.b_submit.Location = new System.Drawing.Point(254, 672);
+            this.b_submit.Name = "b_submit";
+            this.b_submit.Size = new System.Drawing.Size(63, 26);
+            this.b_submit.TabIndex = 121;
+            this.b_submit.Text = "Submit";
+            this.b_submit.UseVisualStyleBackColor = true;
             // 
             // Patient_Details2
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.AutoScroll = true;
             this.AutoSize = true;
-            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(564, 710);
-            this.Controls.Add(this.BtnPatientSubmit);
+            this.Controls.Add(this.b_submit);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.checkedListBox2);
             this.Controls.Add(this.textBox1);
@@ -181,6 +179,6 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.CheckedListBox checkedListBox2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button BtnPatientSubmit;
+        private System.Windows.Forms.Button b_submit;
     }
 }
