@@ -20,9 +20,19 @@ namespace Ember_Medical_Services
             EmberMedicalService_dbEntities = new Ember_medical_service_dbEntities();
         }
 
-        private void b_submit_Click(object sender, EventArgs e)
+        private void BntPatientNxtPage_Click(object sender, EventArgs e)
         {
+            Patient_Details2 patient_Details2 = new Patient_Details2();
+           
+            
+        
+           // patient_Details2.Show();
+
+
+
+            
 
         }
+
     }
 }

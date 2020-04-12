@@ -392,6 +392,7 @@
             this.panelChildForm.Name = "panelChildForm";
             this.panelChildForm.Size = new System.Drawing.Size(580, 749);
             this.panelChildForm.TabIndex = 1;
+         
             // 
             // Home
             // 

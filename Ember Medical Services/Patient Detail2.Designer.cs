@@ -149,6 +149,7 @@
             this.BtnPatientSubmit.TabIndex = 121;
             this.BtnPatientSubmit.Text = "Submit";
             this.BtnPatientSubmit.UseVisualStyleBackColor = true;
+            this.BtnPatientSubmit.Click += new System.EventHandler(this.BtnPatientSubmit_Click);
             // 
             // Patient_Details2
             // 

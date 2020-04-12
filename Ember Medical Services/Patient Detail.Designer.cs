@@ -151,7 +151,7 @@
             this.BntPatientNxtPage.TabIndex = 25;
             this.BntPatientNxtPage.Text = "Next Page";
             this.BntPatientNxtPage.UseVisualStyleBackColor = true;
-            this.BntPatientNxtPage.Click += new System.EventHandler(this.b_submit_Click);
+            this.BntPatientNxtPage.Click += new System.EventHandler(this.BntPatientNxtPage_Click);
             // 
             // label6
             // 
