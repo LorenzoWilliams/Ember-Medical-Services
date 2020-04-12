@@ -12,6 +12,7 @@ namespace Ember_Medical_Services
 {
     public partial class Patient_Details : Form
     {
+<<<<<<< HEAD
         private Ember_medical_service_db ember_Medical_Services_Db;
 
         public Patient_Details()
@@ -30,6 +31,16 @@ namespace Ember_Medical_Services
         {
             var patientDetails = new Patient_Details();
            
+=======
+        public Patient_Details()
+        {
+            InitializeComponent();
+        }
+
+        private void b_submit_Click(object sender, EventArgs e)
+        {
+
+>>>>>>> 2d4aa06e0c577059a9536195efc8a8cbec446ee0
         }
     }
 }

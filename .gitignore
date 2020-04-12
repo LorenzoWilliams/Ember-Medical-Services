@@ -217,3 +217,4 @@ packages/EntityFramework.6.2.0/tools/init.ps1
 packages/EntityFramework.6.2.0/tools/install.ps1
 packages/EntityFramework.6.2.0/tools/migrate.exe
 README.md
+.vs/slnx.sqlite

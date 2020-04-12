@@ -8,7 +8,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+<<<<<<< HEAD:EmberMedicalServices/Properties/Settings.Designer.cs
 namespace EmberMedicalServices.Properties
+=======
+namespace Ember_Medical_Services.Properties
+>>>>>>> 2d4aa06e0c577059a9536195efc8a8cbec446ee0:Ember Medical Services/Properties/Settings.Designer.cs
 {
 
 

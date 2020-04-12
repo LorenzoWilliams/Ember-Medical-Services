@@ -33,17 +33,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -55,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Include="Appointment.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -79,42 +71,36 @@
     <Compile Include="Female_Patients.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+=======
+>>>>>>> 2d4aa06e0c577059a9536195efc8a8cbec446ee0
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model1.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.Context.tt</DependentUpon>
+    <Compile Include="MedicalHistory.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Model1.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.tt</DependentUpon>
+    <Compile Include="MedicalHistory.Designer.cs">
+      <DependentUpon>MedicalHistory.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.edmx</DependentUpon>
+    <Compile Include="MedicalInfo.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Nurse.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+<<<<<<< HEAD
+=======
+    <Compile Include="MedicalInfo.Designer.cs">
+      <DependentUpon>MedicalInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Nurses_Patient_View.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Paid_Patient.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
+>>>>>>> 2d4aa06e0c577059a9536195efc8a8cbec446ee0
     <Compile Include="Patient Detail2.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Patient Detail2.Designer.cs">
       <DependentUpon>Patient Detail2.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="Patient.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -150,6 +136,8 @@
     <Compile Include="ScheduleAppointment.Designer.cs">
       <DependentUpon>ScheduleAppointment.cs</DependentUpon>
     </Compile>
+=======
+>>>>>>> 2d4aa06e0c577059a9536195efc8a8cbec446ee0
     <Compile Include="Staff Details.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -176,9 +164,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="staff_members.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
     <Compile Include="ViewAppointments.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -191,23 +176,31 @@
     <Compile Include="ViewPatients.Designer.cs">
       <DependentUpon>ViewPatients.cs</DependentUpon>
     </Compile>
-    <Compile Include="ViewStaffs.cs">
+    <Compile Include="ViewStaff.cs">
       <SubType>Form</SubType>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="ViewStaffs.Designer.cs">
       <DependentUpon>ViewStaffs.cs</DependentUpon>
     </Compile>
     <Compile Include="Visit.cs">
       <DependentUpon>Model1.tt</DependentUpon>
+=======
+    <Compile Include="ViewStaff.Designer.cs">
+      <DependentUpon>ViewStaff.cs</DependentUpon>
+>>>>>>> 2d4aa06e0c577059a9536195efc8a8cbec446ee0
     </Compile>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MedicalHistory.resx">
+      <DependentUpon>MedicalHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MedicalInfo.resx">
+      <DependentUpon>MedicalInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Patient Detail2.resx">
       <DependentUpon>Patient Detail2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ScheduleAppointment.resx">
-      <DependentUpon>ScheduleAppointment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Staff Details.resx">
       <DependentUpon>Staff Details.cs</DependentUpon>
@@ -236,9 +229,10 @@
     <EmbeddedResource Include="ViewPatients.resx">
       <DependentUpon>ViewPatients.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ViewStaffs.resx">
-      <DependentUpon>ViewStaffs.cs</DependentUpon>
+    <EmbeddedResource Include="ViewStaff.resx">
+      <DependentUpon>ViewStaff.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
     <EntityDeploy Include="Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model1.Designer.cs</LastGenOutput>
@@ -258,6 +252,8 @@
     <None Include="Patient_DataSet.xss">
       <DependentUpon>Patient_DataSet.xsd</DependentUpon>
     </None>
+=======
+>>>>>>> 2d4aa06e0c577059a9536195efc8a8cbec446ee0
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -271,6 +267,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+<<<<<<< HEAD
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
@@ -286,5 +283,7 @@
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
   </ItemGroup>
+=======
+>>>>>>> 2d4aa06e0c577059a9536195efc8a8cbec446ee0
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

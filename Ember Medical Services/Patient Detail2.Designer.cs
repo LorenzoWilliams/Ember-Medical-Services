@@ -50,7 +50,7 @@
             // 
             // checkedListBox1
             // 
-            this.checkedListBox1.BackColor = System.Drawing.Color.White;
+            this.checkedListBox1.BackColor = System.Drawing.SystemColors.MenuBar;
             this.checkedListBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.checkedListBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkedListBox1.FormattingEnabled = true;
@@ -108,7 +108,7 @@
             // 
             // checkedListBox2
             // 
-            this.checkedListBox2.BackColor = System.Drawing.Color.White;
+            this.checkedListBox2.BackColor = System.Drawing.SystemColors.MenuBar;
             this.checkedListBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.checkedListBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkedListBox2.FormattingEnabled = true;
@@ -155,7 +155,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.AutoScroll = true;
             this.AutoSize = true;
-            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(564, 710);
             this.Controls.Add(this.b_submit);
             this.Controls.Add(this.label1);
