@@ -36,7 +36,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tb_firstname = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.b_submit = new System.Windows.Forms.Button();
+            this.BntPatientNxtPage = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
@@ -142,16 +142,16 @@
             this.label1.TabIndex = 26;
             this.label1.Text = "First Name";
             // 
-            // b_submit
+            // BntPatientNxtPage
             // 
-            this.b_submit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.b_submit.Location = new System.Drawing.Point(219, 622);
-            this.b_submit.Name = "b_submit";
-            this.b_submit.Size = new System.Drawing.Size(89, 26);
-            this.b_submit.TabIndex = 25;
-            this.b_submit.Text = "Next Page";
-            this.b_submit.UseVisualStyleBackColor = true;
-            this.b_submit.Click += new System.EventHandler(this.b_submit_Click);
+            this.BntPatientNxtPage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BntPatientNxtPage.Location = new System.Drawing.Point(219, 622);
+            this.BntPatientNxtPage.Name = "BntPatientNxtPage";
+            this.BntPatientNxtPage.Size = new System.Drawing.Size(89, 26);
+            this.BntPatientNxtPage.TabIndex = 25;
+            this.BntPatientNxtPage.Text = "Next Page";
+            this.BntPatientNxtPage.UseVisualStyleBackColor = true;
+            this.BntPatientNxtPage.Click += new System.EventHandler(this.b_submit_Click);
             // 
             // label6
             // 
@@ -884,7 +884,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tb_firstname);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.b_submit);
+            this.Controls.Add(this.BntPatientNxtPage);
             this.Name = "Patient_Details";
             this.Text = "Patient Details";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -907,7 +907,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox tb_firstname;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button b_submit;
+        private System.Windows.Forms.Button BntPatientNxtPage;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label8;
