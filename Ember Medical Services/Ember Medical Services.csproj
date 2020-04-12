@@ -188,7 +188,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ScheduleAppointment.resx">
       <DependentUpon>ScheduleAppointment.cs</DependentUpon>
-      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Staff Details.resx">
       <DependentUpon>Staff Details.cs</DependentUpon>

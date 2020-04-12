@@ -48,3 +48,12 @@ C:\Users\Lon-Nix\Desktop\Ember-Medical-Services\Ember Medical Services\obj\Debug
 C:\Users\Lon-Nix\Desktop\Ember-Medical-Services\Ember Medical Services\obj\Debug\Ember Medical Services.csproj.GenerateResource.cache
 C:\Users\Lon-Nix\Desktop\Ember-Medical-Services\Ember Medical Services\obj\Debug\Ember Medical Services.exe
 C:\Users\Lon-Nix\Desktop\Ember-Medical-Services\Ember Medical Services\obj\Debug\Ember Medical Services.pdb
+C:\Users\Lon-Nix\Desktop\Ember-Medical-Services\Ember Medical Services\bin\Debug\Ember Medical Services.exe.config
+C:\Users\Lon-Nix\Desktop\Ember-Medical-Services\Ember Medical Services\bin\Debug\Ember Medical Services.exe
+C:\Users\Lon-Nix\Desktop\Ember-Medical-Services\Ember Medical Services\bin\Debug\Ember Medical Services.pdb
+C:\Users\Lon-Nix\Desktop\Ember-Medical-Services\Ember Medical Services\bin\Debug\EntityFramework.dll
+C:\Users\Lon-Nix\Desktop\Ember-Medical-Services\Ember Medical Services\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Lon-Nix\Desktop\Ember-Medical-Services\Ember Medical Services\bin\Debug\EntityFramework.xml
+C:\Users\Lon-Nix\Desktop\Ember-Medical-Services\Ember Medical Services\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Lon-Nix\Desktop\Ember-Medical-Services\Ember Medical Services\obj\Debug\Ember_Medical_Services.ScheduleAppointment.resources
+C:\Users\Lon-Nix\Desktop\Ember-Medical-Services\Ember Medical Services\obj\Debug\Ember Medical Services.csproj.CopyComplete

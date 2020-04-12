@@ -1,0 +1,436 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Ember_medical_service_dbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Appointment">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Time" Type="Time" Nullable="false" Precision="7" />
+    <Property Name="Physician_id" Type="Int32" />
+    <Property Name="Patient_id" Type="Int32" />
+    <Property Name="Comments" Type="String" MaxLength="300" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Patient" Relationship="Self.FK__Appointme__Patie__5BE2A6F2" FromRole="Appointments" ToRole="Patients" />
+    <NavigationProperty Name="Physician" Relationship="Self.FK__Appointme__Physi__5AEE82B9" FromRole="Appointments" ToRole="Physicians" />
+  </EntityType>
+  <EntityType Name="Bill">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Currency" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Total" Type="Single" Nullable="false" />
+    <Property Name="Patient_id" Type="Int32" />
+    <NavigationProperty Name="Patient" Relationship="Self.FK__Bills__Patient_i__6477ECF3" FromRole="Bills" ToRole="Patients" />
+    <NavigationProperty Name="Payments" Relationship="Self.FK__Payments__Bill_i__68487DD7" FromRole="Bills" ToRole="Payments" />
+  </EntityType>
+  <EntityType Name="Department">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Department1" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Nurses" Relationship="Self.FK__Nurses__Departme__534D60F1" FromRole="Departments" ToRole="Nurses" />
+    <NavigationProperty Name="Physicians" Relationship="Self.FK__Physician__Depar__4F7CD00D" FromRole="Departments" ToRole="Physicians" />
+    <NavigationProperty Name="Receptionists" Relationship="Self.FK__Reception__Depar__571DF1D5" FromRole="Departments" ToRole="Receptionists" />
+  </EntityType>
+  <EntityType Name="Nurse">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Last_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Department_id" Type="Int32" />
+    <Property Name="Position_id" Type="Int32" />
+    <Property Name="Address" Type="String" MaxLength="300" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Phone" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Department" Relationship="Self.FK__Nurses__Departme__534D60F1" FromRole="Nurses" ToRole="Departments" />
+    <NavigationProperty Name="Position" Relationship="Self.FK__Nurses__Position__5441852A" FromRole="Nurses" ToRole="Positions" />
+    <NavigationProperty Name="Visits" Relationship="Self.FK__Visits__Nurse_id__60A75C0F" FromRole="Nurses" ToRole="Visits" />
+  </EntityType>
+  <EntityType Name="Patient">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Gender" Type="String" MaxLength="1" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="D_O_B" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Address" Type="String" MaxLength="300" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Phone" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Appointments" Relationship="Self.FK__Appointme__Patie__5BE2A6F2" FromRole="Patients" ToRole="Appointments" />
+    <NavigationProperty Name="Bills" Relationship="Self.FK__Bills__Patient_i__6477ECF3" FromRole="Patients" ToRole="Bills" />
+    <NavigationProperty Name="Payments" Relationship="Self.FK__Payments__Patien__693CA210" FromRole="Patients" ToRole="Payments" />
+    <NavigationProperty Name="Visits" Relationship="Self.FK__Visits__Patient___5FB337D6" FromRole="Patients" ToRole="Visits" />
+  </EntityType>
+  <EntityType Name="Payment">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Receptionist_id" Type="Int32" />
+    <Property Name="Bill_id" Type="Int32" />
+    <Property Name="Patient_id" Type="Int32" />
+    <Property Name="Pay_Status" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Bill" Relationship="Self.FK__Payments__Bill_i__68487DD7" FromRole="Payments" ToRole="Bills" />
+    <NavigationProperty Name="Patient" Relationship="Self.FK__Payments__Patien__693CA210" FromRole="Payments" ToRole="Patients" />
+    <NavigationProperty Name="Receptionist" Relationship="Self.FK__Payments__Recept__6754599E" FromRole="Payments" ToRole="Receptionists" />
+  </EntityType>
+  <EntityType Name="Physician">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="FirstName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Last_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Gender" Type="String" MaxLength="1" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Department_id" Type="Int32" />
+    <Property Name="Position_id" Type="Int32" />
+    <Property Name="Address" Type="String" MaxLength="300" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Phone" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Appointments" Relationship="Self.FK__Appointme__Physi__5AEE82B9" FromRole="Physicians" ToRole="Appointments" />
+    <NavigationProperty Name="Department" Relationship="Self.FK__Physician__Depar__4F7CD00D" FromRole="Physicians" ToRole="Departments" />
+    <NavigationProperty Name="Position" Relationship="Self.FK__Physician__Posit__5070F446" FromRole="Physicians" ToRole="Positions" />
+    <NavigationProperty Name="Visits" Relationship="Self.FK__Visits__Physicia__619B8048" FromRole="Physicians" ToRole="Visits" />
+  </EntityType>
+  <EntityType Name="Position">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Position1" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Nurses" Relationship="Self.FK__Nurses__Position__5441852A" FromRole="Positions" ToRole="Nurses" />
+    <NavigationProperty Name="Physicians" Relationship="Self.FK__Physician__Posit__5070F446" FromRole="Positions" ToRole="Physicians" />
+    <NavigationProperty Name="Receptionists" Relationship="Self.FK__Reception__Posit__5812160E" FromRole="Positions" ToRole="Receptionists" />
+  </EntityType>
+  <EntityType Name="Receptionist">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Last_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Department_id" Type="Int32" />
+    <Property Name="Position_id" Type="Int32" />
+    <Property Name="Address" Type="String" MaxLength="300" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Phone" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Department" Relationship="Self.FK__Reception__Depar__571DF1D5" FromRole="Receptionists" ToRole="Departments" />
+    <NavigationProperty Name="Payments" Relationship="Self.FK__Payments__Recept__6754599E" FromRole="Receptionists" ToRole="Payments" />
+    <NavigationProperty Name="Position" Relationship="Self.FK__Reception__Posit__5812160E" FromRole="Receptionists" ToRole="Positions" />
+    <NavigationProperty Name="Visits" Relationship="Self.FK__Visits__Receptio__5EBF139D" FromRole="Receptionists" ToRole="Visits" />
+  </EntityType>
+  <EntityType Name="Visit">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Time" Type="Time" Nullable="false" Precision="7" />
+    <Property Name="Receptionist_id" Type="Int32" />
+    <Property Name="Patient_id" Type="Int32" />
+    <Property Name="Nurse_id" Type="Int32" />
+    <Property Name="Weight_lb" Type="Single" Nullable="false" />
+    <Property Name="Height_cm" Type="Single" Nullable="false" />
+    <Property Name="Blood_Pressure" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Blood_Sugar" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Physician_id" Type="Int32" />
+    <Property Name="Symptoms" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Diagnosis" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Prescription" Type="String" MaxLength="300" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Comments" Type="String" MaxLength="300" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Nurse" Relationship="Self.FK__Visits__Nurse_id__60A75C0F" FromRole="Visits" ToRole="Nurses" />
+    <NavigationProperty Name="Patient" Relationship="Self.FK__Visits__Patient___5FB337D6" FromRole="Visits" ToRole="Patients" />
+    <NavigationProperty Name="Physician" Relationship="Self.FK__Visits__Physicia__619B8048" FromRole="Visits" ToRole="Physicians" />
+    <NavigationProperty Name="Receptionist" Relationship="Self.FK__Visits__Receptio__5EBF139D" FromRole="Visits" ToRole="Receptionists" />
+  </EntityType>
+  <Association Name="FK__Appointme__Patie__5BE2A6F2">
+    <End Role="Patients" Type="Self.Patient" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Appointments" Type="Self.Appointment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Patients">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Appointments">
+        <PropertyRef Name="Patient_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Appointme__Physi__5AEE82B9">
+    <End Role="Physicians" Type="Self.Physician" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Appointments" Type="Self.Appointment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Physicians">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Appointments">
+        <PropertyRef Name="Physician_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Bills__Patient_i__6477ECF3">
+    <End Role="Patients" Type="Self.Patient" Multiplicity="0..1" />
+    <End Role="Bills" Type="Self.Bill" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Patients">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Bills">
+        <PropertyRef Name="Patient_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Payments__Bill_i__68487DD7">
+    <End Role="Bills" Type="Self.Bill" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Payments" Type="Self.Payment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Bills">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Payments">
+        <PropertyRef Name="Bill_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Nurses__Departme__534D60F1">
+    <End Role="Departments" Type="Self.Department" Multiplicity="0..1" />
+    <End Role="Nurses" Type="Self.Nurse" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Departments">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Nurses">
+        <PropertyRef Name="Department_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Physician__Depar__4F7CD00D">
+    <End Role="Departments" Type="Self.Department" Multiplicity="0..1" />
+    <End Role="Physicians" Type="Self.Physician" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Departments">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Physicians">
+        <PropertyRef Name="Department_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Reception__Depar__571DF1D5">
+    <End Role="Departments" Type="Self.Department" Multiplicity="0..1" />
+    <End Role="Receptionists" Type="Self.Receptionist" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Departments">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Receptionists">
+        <PropertyRef Name="Department_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Nurses__Position__5441852A">
+    <End Role="Positions" Type="Self.Position" Multiplicity="0..1" />
+    <End Role="Nurses" Type="Self.Nurse" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Positions">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Nurses">
+        <PropertyRef Name="Position_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Visits__Nurse_id__60A75C0F">
+    <End Role="Nurses" Type="Self.Nurse" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Visits" Type="Self.Visit" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Nurses">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Visits">
+        <PropertyRef Name="Nurse_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Payments__Patien__693CA210">
+    <End Role="Patients" Type="Self.Patient" Multiplicity="0..1" />
+    <End Role="Payments" Type="Self.Payment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Patients">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Payments">
+        <PropertyRef Name="Patient_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Visits__Patient___5FB337D6">
+    <End Role="Patients" Type="Self.Patient" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Visits" Type="Self.Visit" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Patients">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Visits">
+        <PropertyRef Name="Patient_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Payments__Recept__6754599E">
+    <End Role="Receptionists" Type="Self.Receptionist" Multiplicity="0..1" />
+    <End Role="Payments" Type="Self.Payment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Receptionists">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Payments">
+        <PropertyRef Name="Receptionist_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Physician__Posit__5070F446">
+    <End Role="Positions" Type="Self.Position" Multiplicity="0..1" />
+    <End Role="Physicians" Type="Self.Physician" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Positions">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Physicians">
+        <PropertyRef Name="Position_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Visits__Physicia__619B8048">
+    <End Role="Physicians" Type="Self.Physician" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Visits" Type="Self.Visit" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Physicians">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Visits">
+        <PropertyRef Name="Physician_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Reception__Posit__5812160E">
+    <End Role="Positions" Type="Self.Position" Multiplicity="0..1" />
+    <End Role="Receptionists" Type="Self.Receptionist" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Positions">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Receptionists">
+        <PropertyRef Name="Position_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Visits__Receptio__5EBF139D">
+    <End Role="Receptionists" Type="Self.Receptionist" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Visits" Type="Self.Visit" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Receptionists">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Visits">
+        <PropertyRef Name="Receptionist_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Ember_medical_service_dbEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Appointments" EntityType="Self.Appointment" />
+    <EntitySet Name="Bills" EntityType="Self.Bill" />
+    <EntitySet Name="Departments" EntityType="Self.Department" />
+    <EntitySet Name="Nurses" EntityType="Self.Nurse" />
+    <EntitySet Name="Patients" EntityType="Self.Patient" />
+    <EntitySet Name="Payments" EntityType="Self.Payment" />
+    <EntitySet Name="Physicians" EntityType="Self.Physician" />
+    <EntitySet Name="Positions" EntityType="Self.Position" />
+    <EntitySet Name="Receptionists" EntityType="Self.Receptionist" />
+    <EntitySet Name="Visits" EntityType="Self.Visit" />
+    <AssociationSet Name="FK__Appointme__Patie__5BE2A6F2" Association="Self.FK__Appointme__Patie__5BE2A6F2">
+      <End Role="Patients" EntitySet="Patients" />
+      <End Role="Appointments" EntitySet="Appointments" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Appointme__Physi__5AEE82B9" Association="Self.FK__Appointme__Physi__5AEE82B9">
+      <End Role="Physicians" EntitySet="Physicians" />
+      <End Role="Appointments" EntitySet="Appointments" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Bills__Patient_i__6477ECF3" Association="Self.FK__Bills__Patient_i__6477ECF3">
+      <End Role="Patients" EntitySet="Patients" />
+      <End Role="Bills" EntitySet="Bills" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Payments__Bill_i__68487DD7" Association="Self.FK__Payments__Bill_i__68487DD7">
+      <End Role="Bills" EntitySet="Bills" />
+      <End Role="Payments" EntitySet="Payments" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Nurses__Departme__534D60F1" Association="Self.FK__Nurses__Departme__534D60F1">
+      <End Role="Departments" EntitySet="Departments" />
+      <End Role="Nurses" EntitySet="Nurses" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Physician__Depar__4F7CD00D" Association="Self.FK__Physician__Depar__4F7CD00D">
+      <End Role="Departments" EntitySet="Departments" />
+      <End Role="Physicians" EntitySet="Physicians" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Reception__Depar__571DF1D5" Association="Self.FK__Reception__Depar__571DF1D5">
+      <End Role="Departments" EntitySet="Departments" />
+      <End Role="Receptionists" EntitySet="Receptionists" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Nurses__Position__5441852A" Association="Self.FK__Nurses__Position__5441852A">
+      <End Role="Positions" EntitySet="Positions" />
+      <End Role="Nurses" EntitySet="Nurses" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Visits__Nurse_id__60A75C0F" Association="Self.FK__Visits__Nurse_id__60A75C0F">
+      <End Role="Nurses" EntitySet="Nurses" />
+      <End Role="Visits" EntitySet="Visits" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Payments__Patien__693CA210" Association="Self.FK__Payments__Patien__693CA210">
+      <End Role="Patients" EntitySet="Patients" />
+      <End Role="Payments" EntitySet="Payments" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Visits__Patient___5FB337D6" Association="Self.FK__Visits__Patient___5FB337D6">
+      <End Role="Patients" EntitySet="Patients" />
+      <End Role="Visits" EntitySet="Visits" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Payments__Recept__6754599E" Association="Self.FK__Payments__Recept__6754599E">
+      <End Role="Receptionists" EntitySet="Receptionists" />
+      <End Role="Payments" EntitySet="Payments" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Physician__Posit__5070F446" Association="Self.FK__Physician__Posit__5070F446">
+      <End Role="Positions" EntitySet="Positions" />
+      <End Role="Physicians" EntitySet="Physicians" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Visits__Physicia__619B8048" Association="Self.FK__Visits__Physicia__619B8048">
+      <End Role="Physicians" EntitySet="Physicians" />
+      <End Role="Visits" EntitySet="Visits" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Reception__Posit__5812160E" Association="Self.FK__Reception__Posit__5812160E">
+      <End Role="Positions" EntitySet="Positions" />
+      <End Role="Receptionists" EntitySet="Receptionists" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Visits__Receptio__5EBF139D" Association="Self.FK__Visits__Receptio__5EBF139D">
+      <End Role="Receptionists" EntitySet="Receptionists" />
+      <End Role="Visits" EntitySet="Visits" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
